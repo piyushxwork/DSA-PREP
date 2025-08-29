@@ -3,6 +3,8 @@
 
 using namespace std;
 
+
+
 int missingNo(vector<int> &arr, int n){
     for(int i=1; i<n; i++){
         bool flag = false;
