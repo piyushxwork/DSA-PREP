@@ -48,7 +48,7 @@ vector<int> rearrange(int arr[], int n){
 int main(){
     int n = 6;
 
-    int arr[6] = {2,-2,-4,5,1,5};
+    int arr[6] = {2,-2,-4,5,-1,5};
 
     vector<int> Ans = rearrange(arr,6);
     for(int i=0; i<n; i++){
