@@ -2,18 +2,63 @@
 #include<vector>
 using namespace std;
 
-void mS(vector<int> &arr, int start, int end , int mid){
+// void mS(vector<int> &arr, int start, int end , int mid){
+//     int left = start;
+//     int right = mid + 1;
+
+//     vector<int> temp;
+
+//     while(left <= mid && right <= end){
+//         if(arr[left] <= arr[right]){
+//             temp.push_back(arr[left]);
+//             left++;
+//         }
+//         else{
+//             temp.push_back(arr[right]);
+//             right++;
+//         }
+//     }
+
+//     while(left <= mid){
+//         temp.push_back(arr[left]);
+//         left++;
+//     }
+
+//     while(right <= end){
+//         temp.push_back(arr[right]);
+//         right++;
+//     }
+
+//     for(int i = start; i <= end; i++){
+//         arr[i] = temp[i - start];
+//     }
+// }
+
+// void MergeSort(vector<int> &arr, int start, int end){
+//     if(start >= end) return;
+
+//     int mid = start + (end - start) / 2;
+
+//     MergeSort(arr, start, mid);
+//     MergeSort(arr, mid + 1, end);
+//     mS(arr, start, end, mid);
+// }
+
+
+
+void Merge(vector<int> &arr, int start, int end, int mid){
+    vector<int> temp;
     int left = start;
     int right = mid + 1;
 
-    vector<int> temp;
-
     while(left <= mid && right <= end){
+
         if(arr[left] <= arr[right]){
-            temp.push_back(arr[left]);
+            temp.push_back(arr[left]); 
             left++;
         }
-        else{
+
+        else if(arr[right] < arr[left]){
             temp.push_back(arr[right]);
             right++;
         }
@@ -29,19 +74,23 @@ void mS(vector<int> &arr, int start, int end , int mid){
         right++;
     }
 
-    for(int i = start; i <= end; i++){
+    for(int i= start ; i <= end; i++){
         arr[i] = temp[i - start];
     }
 }
 
+
 void MergeSort(vector<int> &arr, int start, int end){
     if(start >= end) return;
 
-    int mid = start + (end - start) / 2;
+    int mid = start + (end - start)/2;
 
     MergeSort(arr, start, mid);
     MergeSort(arr, mid + 1, end);
-    mS(arr, start, end, mid);
+
+    Merge(arr, start, end, mid);
+    
+
 }
 
 int main(){
@@ -54,3 +103,5 @@ int main(){
     }
     cout << endl;
 }
+
+

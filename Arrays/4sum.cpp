@@ -1,6 +1,7 @@
 #include<iostream>
 #include<set>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 vector<vector<int>> Foursome(vector<int>& arr, int n){
@@ -12,6 +13,7 @@ vector<vector<int>> Foursome(vector<int>& arr, int n){
                 for(int p = k + 1; p<n; p++){
                     if(arr[i] + arr[j] + arr[k] + arr[p] == 0 && i != j && i != k && i != p && j != k && j != p && k != p){
                         vector<int> temp = {arr[i], arr[j], arr[k], arr[p]};
+                        sort(temp.begin(), temp.end());
                         st.insert(temp);
                     }
                 }
