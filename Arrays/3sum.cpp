@@ -5,24 +5,24 @@
 
 using namespace std;
 
-// vector<vector<int>> threeSum(vector<int> &arr, int n){
-//     set<vector<int>> st;
+vector<vector<int>> threeSum(vector<int> &arr, int n){
+    set<vector<int>> st;
 
-//     for(int i=0; i<n; i++){
-//         for(int j=0; j<n; j++){
-//             for(int k=0; k<n; k++){
-//                 if(arr[i] + arr[j] + arr[k] == 0 && i != j && j != k && i != k){
-//                     vector<int> temp = {arr[i], arr[j], arr[k]};
-//                     sort(temp.begin(), temp.end());
-//                     st.insert(temp);
-//                 }
-//             }
-//         }
-//     }
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            for(int k=0; k<n; k++){
+                if(arr[i] + arr[j] + arr[k] == 0 && i != j && j != k && i != k){
+                    vector<int> temp = {arr[i], arr[j], arr[k]};
+                    sort(temp.begin(), temp.end());
+                    st.insert(temp);
+                }
+            }
+        }
+    }
 
-//     vector<vector<int>> ans(st.begin(), st.end());
-//     return ans;
-// }
+    vector<vector<int>> ans(st.begin(), st.end());
+    return ans;
+}
 
 
 vector<vector<int>> threesum(vector<int>& arr, int n){
@@ -65,6 +65,9 @@ vector<vector<int>> threesum(vector<int>& arr, int n){
     }
     return ans;
 }
+
+
+
 
 
 
