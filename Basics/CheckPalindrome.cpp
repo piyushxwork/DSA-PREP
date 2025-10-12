@@ -4,63 +4,63 @@ using namespace std;
 
 // Array Palindrome Check
 
-// void Palindrome(int arr[], int n){
-//     int start = 0;
-//     int end = n - 1;
+void Palindrome(int arr[], int n){
+    int start = 0;
+    int end = n - 1;
 
-//     while(start <= end){
-//         if(arr[start] != arr[end]){
-//             cout<<"Not a Palindrome"<<endl;
-//             return;
-//         }
-//         else {
-//             start++;
-//             end--;
-//         }
-//     }
-//     cout<<"Yes ! Array is aPalindrome"<<endl;
-// }
+    while(start <= end){
+        if(arr[start] != arr[end]){
+            cout<<"Not a Palindrome"<<endl;
+            return;
+        }
+        else {
+            start++;
+            end--;
+        }
+    }
+    cout<<"Yes ! Array is aPalindrome"<<endl;
+}
 
 
-// int main(){
-//     int arr[5] = {1, 2, 3, 2, 1};
-//     int n = 5;
+int main(){
+    int arr[5] = {1, 2, 3, 2, 1};
+    int n = 5;
 
-//     Palindrome(arr, n);
+    Palindrome(arr, n);
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 // String Palindrome Check
 
-// void Palindrome(string s, int n){
-//     int start = 0;
-//     int end = n - 1;
+void Palindrome(string s, int n){
+    int start = 0;
+    int end = n - 1;
 
-//     while(start <= end){
-//         if(s[start] != s[end]){
-//             cout<<"Not a Palindrome"<<endl;
-//             return;
-//         }
+    while(start <= end){
+        if(s[start] != s[end]){
+            cout<<"Not a Palindrome"<<endl;
+            return;
+        }
 
-//         else{
-//             start++;
-//             end--;
-//         }
-//     }
+        else{
+            start++;
+            end--;
+        }
+    }
 
-//     cout<<"Yes ! String is a Palindrome"<<endl;
-// }
+    cout<<"Yes ! String is a Palindrome"<<endl;
+}
 
 
-// int main(){
-//     string s = "MADAM";
-//     int n = s.size();
+int main(){
+    string s = "MADAM";
+    int n = s.size();
 
-//     Palindrome(s, n);
-//     return 0;
-// }
+    Palindrome(s, n);
+    return 0;
+}
 
 
 
@@ -78,7 +78,7 @@ bool palindromeCheck(string &s, int start, int end){
 
 
 int main(){
-    string s = "MADDM";
+    string s = "MADAM";
     int n = s.size();
 
     bool Palindrome = palindromeCheck(s, 0, n-1);
